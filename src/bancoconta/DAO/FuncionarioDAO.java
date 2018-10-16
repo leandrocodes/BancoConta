@@ -26,7 +26,7 @@ public class FuncionarioDAO {
         return null;
     }
     
-    public void add(Funcionario funcionario){
+    public void addFuncionario(Funcionario funcionario){
         lista.add(funcionario);
     }
 }
