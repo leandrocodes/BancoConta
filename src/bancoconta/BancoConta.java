@@ -39,7 +39,18 @@ public class BancoConta {
                    int numero = aux.nextInt();
                    Agencia agencia = agenciaDAO.getAgencia(numero);
                    
-                   System.out.println("");
+                   System.out.println("Digite o CPF do cliente: ");
+                   String cpf = aux.nextLine();
+                   Cliente cliente = clienteDAO.getCliente(cpf);
+                   
+                   if(agencia == null || cliente == null){
+                       System.out.println("Não foi possível criar, cliente ou agência inexistentes");
+                   }else{
+                       System.out.println("Digite o número da conta: ");
+                       int nc = aux.nextInt();
+                       
+                       Conta ct = contaDAO.getConta(nc);
+                   }
         }
         }
         
